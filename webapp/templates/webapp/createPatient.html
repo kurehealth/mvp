@@ -261,10 +261,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                 <div class="m-portlet__head-caption">
                                     <div class="m-portlet__head-title">
                                         <h3 class="m-portlet__head-text">
-                                            Client Registration
-                                            <small>
-                                                form wizard example
-                                            </small>
+                                            Patient Registration
+                                            
                                         </h3>
                                     </div>
                                 </div>
@@ -1391,7 +1389,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <div class="row">
                                                                                 <div class="col-lg-6">
                                                                                        <button class="btn btn-primary"
-                                                                                               onclick="autoFillForm('autofilledValue')"
+                                                                                               onclick="generalExaminationAutoFillForm()"
                                                                                                style="float:right">Autofill Form
                                                             </button>
                                                                                 </div>
@@ -3630,7 +3628,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             id="m_select2_3" name="Diagnosis"
                                                                             multiple="multiple" style="width:100%">
                                                                         <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                                            <option value="AK" selected>
+                                                                            <option value="AK">
                                                                                 Hypertension
                                                                             </option>
                                                                             <option value="HI">
@@ -4607,8 +4605,26 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <script type="text/javascript">
 
-    function autoFillForm(autoFill) {
-        $('.autofill').val(autoFill)
+    var GeneralConditions = document.getElementsByName("GeneralConditions");
+
+var GeneralExaminationAutoFillValues={GeneralConditions:"poor",
+    Built:"fair",PulseRate:"72",Systolic:"120",Diastolic:"80",Temperature:"37",RespiratoryRate:"16",SkeletalExamination:"Normal"};
+
+    function generalExaminationAutoFillForm() {
+        for(var key in GeneralExaminationAutoFillValues){
+            console.log(key);
+            console.log(GeneralExaminationAutoFillValues[key])
+            if(GeneralExaminationAutoFillValues[key]=="Yes"){
+                document.getElementsByName(key)[0].checked="checked";
+            }
+            else if (GeneralExaminationAutoFillValues[key]=="No"){
+                document.getElementsByName(key)[0].checked="";
+            }
+            else{
+                document.getElementsByName(key)[0].value=GeneralExaminationAutoFillValues[key];
+            }
+        }
+        
     }
 
 </script>
