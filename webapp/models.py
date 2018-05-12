@@ -44,7 +44,7 @@ class formModel(models.Model):
     Cyanosis = models.BooleanField(default=False)
     PittingEdema = models.BooleanField(default=False)
     NeurocutaneousMarkers = models.CharField(max_length=126, null=True)
-    SubcutaneousMarkers = models.BooleanField(default=False)
+    SubcutaneousMarkers = models.BooleanField(default=False, blank=True)
     SkeletalExamination = models.CharField(max_length=126, null=True)
     # models of CNS examination
     EyeResponse = models.CharField(max_length=126, null=True)

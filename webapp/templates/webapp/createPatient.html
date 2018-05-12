@@ -394,6 +394,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     Kure ID:
                                                                 </label>
                                                                 <div class="col-xl-9 col-lg-9">
+                                                                    
                                                                     <input type="text"
                                                                            class="form-control m--font-success"
                                                                            readonly="true" id="myLabel"
@@ -403,16 +404,16 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             </div>
                                                             <div class="form-group m-form__group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    Name:
+                                                                    Name<span style="color:red">*</span>:
                                                                 </label>
-                                                                <div class="col-xl-9 col-lg-9" name>
+                                                                <div class="col-xl-6 col-lg-6" name>
                                                                     {{ form.Name }}
 
                                                                 </div>
                                                             </div>
                                                             <div class="form-group m-form__group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    Age:
+                                                                    Age<span style="color:red">*:
                                                                 </label>
                                                                 <div class="col-xl-9 col-lg-9">
 
@@ -424,7 +425,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             </div>
                                                             <div class="form-group m-form__group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    Gender:
+                                                                    Gender<span style="color:red">*:
                                                                 </label>
                                                                 <div class="col-xl-9 col-lg-9">
                                                                     <div class="m-radio-inline">
@@ -448,7 +449,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                             </div>
                                                             <div class="form-group m-form__group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    OP No:
+                                                                    OP No<span style="color:red">*:
                                                                 </label>
                                                                 <div class="col-xl-9 col-lg-9">
                                                                     <input type="number" class="form-control col-sm-4"
@@ -460,7 +461,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                             <div class="form-group m-form__group row">
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
-                                                                    IP No:
+                                                                    IP No<span style="color:red">*:
                                                                 </label>
                                                                 <div class="col-xl-9 col-lg-9">
                                                                     <input type="number" class="form-control col-sm-4"
@@ -474,9 +475,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 <label class="col-xl-3 col-lg-3 col-form-label">
                                                                     Address:
                                                                 </label>
-                                                                <div class="col-xl-9 col-lg-9">
-                                                                    <input type="text" name="Address"
-                                                                           class="form-control">
+                                                                <div class="col-xl-6 col-lg-6">
+
+                                                                        <textarea class="form-control m-input" id="exampleTextarea" rows="3" name="Address"></textarea>
+                                                                  
 
 
                                                                 </div>
@@ -698,7 +700,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                         History Of Illness:
                                                                     </label>
                                                                     <textarea name="Historyofillness"
-                                                                              class="form-control"></textarea>
+                                                                              class="form-control" rows="10"></textarea>
 
                                                                 </div>
 
@@ -878,9 +880,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                 </div>
                                                             </div>
 
-                                                            <br>
-                                                            <br>
-                                                            <br>
+                                                            
                                                             <!-- Leaving spaces before next element -->
                                                             <div class="form-group m-form__group row">
                                                                 <label class="col-form-label col-lg-3 col-sm-12">
@@ -1144,8 +1144,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     <label class="form-control-label">
                                                                         Summary:
                                                                     </label>
-                                                                    <textarea name="Summary"
-                                                                              class="col-sm-12"></textarea>
+                                                                    <textarea name="Summary" class="form-control col-sm-12"
+                                                                              rows="5"></textarea>
 
                                                                 </div>
 
@@ -1483,7 +1483,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                                id="number4">
                                                                                     </div>
                                                                                 </div>
-                                                                                <br><br>
+                                                                                <br>
 
 
                                                                                 <div class="card">
@@ -1529,7 +1529,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                 </div>
 
 
-                                                                                <br><br>
+                                                                                <br>
 
 
                                                                                 <div class="form-group m-form__group row">
@@ -1659,21 +1659,20 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                         <label class="form-control-label">
                                                                                             Neurocutaneous Markers:
                                                                                         </label>
-                                                                                        <select name="NeurocutaneousMarkers"
-                                                                                                class="form-control">
-                                                                                            <option value="fair">
-                                                                                                Cafe-luit-apotis
-                                                                                            </option>
-                                                                                            <option value="good">
-                                                                                                Hemangiomas
-                                                                                            </option>
-                                                                                            <option value="poor">Tuft of
-                                                                                                hair
-                                                                                            </option>
-                                                                                            <option value="poor">
-                                                                                                Lipoma
-                                                                                            </option>
-                                                                                        </select>
+
+                                                                                        <select multiple="" class="form-control m-input m-input--air" id="exampleSelect2" name="NeurocutaneousMarkers">
+                                                                                                <option>
+                                                                                                  Cafe Olespots  
+                                                                                                </option>
+                                                                                                <option>
+                                                                                                    Shagreen Patch
+                                                                                                </option>
+                                                                                                <option>
+                                                                                                    NF
+                                                                                                </option>
+                                                                                
+                                                                                            </select>
+                                                                        
 
                                                                                     </div>
                                                                                 </div>
@@ -1711,7 +1710,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                 <div class="form-group m-form__group row">
                                                                                     <div class="col-lg-6">
                                                                                         <label class="form-control-label">
-                                                                                            Sekeletal Examination:
+                                                                                            Skeletal Examination:
                                                                                         </label>
                                                                                         <input type="text"
                                                                                                class="form-control col-sm-12"
@@ -1998,31 +1997,24 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                                         </table>
                                                                         <br>
-
+                                                                        <p style="font-size:1.5em">
+                                                                                Olfactory</p>
+                                    
 
                                                                         <table class="table">
 
-                                                                            <thead>
-                                                                            <tr align="left">
-                                                                                <th scope="col"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-
-                                                                            </tr>
-                                                                            </thead>
+                                                                           
                                                                             <tbody>
                                                                             <tr align="left">
                                                                                 <th scope="row"
-                                                                                    style="font-size: 1.5em">Olfactory
+                                                                                >Smell
                                                                                 </th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="OlfactoryRight"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="OlfactoryLeft"></td>
 
@@ -2032,8 +2024,8 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
                                                                         <table class="table">
-                                                                            <p style="font-size:1.5em;color:black">
-                                                                                Optic</p>
+                                                                            <p style="font-size:1.5em">
+                                            Optic</p>
 
                                                                             <thead>
 
@@ -2044,11 +2036,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr align="left">
                                                                                 <th scope="row">Visual Acuity</th>
                                                                                 <td><input type="text"
-                                                                                           style="border-color:#ff000094"
+                                                                                           style=" "
                                                                                            class="form-control" name="VisualAcuityRight">
                                                                                 </td>
                                                                                 <td><input type="text"
-                                                                                           style="border-color:#0000ff96"
+                                                                                           style=" "
                                                                                            class="form-control" name="VisualAcuityLeft">
                                                                                 </td>
 
@@ -2056,11 +2048,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr align="left">
                                                                                 <th scope="row">Color Vision</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="ColorVisionRIght"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="ColorVisionLeft"></td>
 
@@ -2068,11 +2060,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr align="left">
                                                                                 <th scope="row">Field</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="FieldRight"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="FieldLeft"></td>
 
@@ -2080,11 +2072,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr align="left">
                                                                                 <th scope="row">Fundus</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="FundusRight"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="FundusLeft"></td>
 
@@ -2092,11 +2084,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr align="left">
                                                                                 <th scope="row">Nystagmus</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="NystagmusLeft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="NystagmusRight"></td>
 
@@ -2118,11 +2110,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Movements</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="MovemenstRight"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="MovemenstLeft"></td>
 
@@ -2130,11 +2122,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Pupil</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="PupilRight"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="PupilLeft"></td>
 
@@ -2142,11 +2134,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Light Reflex</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="Lightreflexright"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="Lightreflexleft"></td>
 
@@ -2154,11 +2146,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Direct</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="DirectRight"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="DirectLeft"></td>
 
@@ -2166,11 +2158,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Consensual</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="ConsensualRight"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="ConsensualLeft"></td>
 
@@ -2178,11 +2170,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Nystagmus</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="nystagmusright"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="nystagmusleft"></td>
 
@@ -2190,11 +2182,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Accomodation</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="accomodationLeft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="accomodationRight"></td>
 
@@ -2215,11 +2207,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Sensory</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="sensoryRight"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="sensoryLeft"></td>
 
@@ -2227,11 +2219,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Motor</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="motorRight"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="motorLeft"></td>
 
@@ -2239,11 +2231,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Jaw Jerk</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="jawjerkright"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="jawjerkleft"></td>
 
@@ -2251,11 +2243,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Comeal Reflex</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="comealreflexright"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="comealreflexleft"></td>
 
@@ -2276,11 +2268,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr align="left">
                                                                                 <th scope="row">Eye Closure</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="eyeclosesureright"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="eyeclosesureleft"></td>
 
@@ -2289,11 +2281,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                 <th scope="row">Facial <br> Expressions
                                                                                 </th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="facialexpressionsright"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="facialexpressionsleft"></td>
 
@@ -2301,11 +2293,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr align="left">
                                                                                 <th scope="row">Comeal Reflex</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="Comealexpressionright"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name=" Comealexpressionleft"></td>
 
@@ -2313,11 +2305,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr align="left">
                                                                                 <th scope="row">Taste</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="tasteleft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="tasteright"></td>
 
@@ -2326,11 +2318,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr align="left">
                                                                                 <th scope="row">Sensory</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="SensoryLeft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="SensoryRight"></td>
 
@@ -2352,22 +2344,22 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Rhombus Test</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="rhombusright"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="rhombusleft"></td>
                                                                             </tr>
                                                                             <tr>
                                                                                 <th scope="row">Rinnes Test</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="rinnesleft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="rinnesright"></td>
 
@@ -2375,11 +2367,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Webbers Test</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="rinnesright"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="webbersleft"></td>
 
@@ -2387,11 +2379,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">ABC</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="ABCleft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="ABCright"></td>
 
@@ -2413,11 +2405,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Sensory</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="sensoryRight1"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="sensoryLeft1"></td>
 
@@ -2425,11 +2417,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Motor</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="motorLeft1"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="motorRight1"></td>
 
@@ -2437,11 +2429,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Gag Reflex</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="Gagleft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="GagRight"></td>
 
@@ -2450,11 +2442,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                 <th scope="row">Palatal <br> Movements
                                                                                 </th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="palatalright"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="palatalleft"></td>
 
@@ -2462,11 +2454,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Uvula</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="uvulaleft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="uvularight"></td>
 
@@ -2488,11 +2480,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Trapezius</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="trapeziusleft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="trapeziusright"></td>
 
@@ -2500,11 +2492,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">SCM</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="scmleft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="scmright"></td>
 
@@ -2527,11 +2519,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                 <th scope="row">Power of <br> Tongue
                                                                                 </th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="poweroftongueright"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="poweroftongueleft"></td>
 
@@ -2539,11 +2531,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Wasting</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="wastingleft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="wastingright"></td>
 
@@ -2551,11 +2543,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <tr>
                                                                                 <th scope="row">Protrusion</th>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#ff000094"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="protrusionleft"></td>
                                                                                 <td width="40%"><input type="text"
-                                                                                                       style="border-color:#0000ff96"
+                                                                                                       style=" "
                                                                                                        class="form-control"
                                                                                                        name="protrusionright"></td>
 
@@ -2655,7 +2647,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
 
                                                                         <table class="table">
-                                                                            <thead>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Tone</th>
                                                                                 <td width="40%"><select
@@ -2684,18 +2676,16 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                                        name="bulkleft"></td>
 
                                                                             </tr>
-                                                                            <tr>
-                                                                                <th scope="row">Shoulder</th>
-                                                                                <td width="40%"><input type="text"
-                                                                                                       class="form-control"
-                                                                                                       name="shoulderright"></td>
-                                                                                <td width="40%"><input type="text"
-                                                                                                       class="form-control"
-                                                                                                       name="shoulderleft"></td>
-
-                                                                            </tr>
+                                                                            
+                                                                        </tbody>
+                                                                        </table>
+                                                                        <table class="table">
+                                                                            <thead>
+                                                                                    <h5>
+                                                                                            Shoulder
+                                                                                        </h5>
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Abduction</th>
                                                                                 <td width="40%"><input type="text"
@@ -2743,17 +2733,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                         <table class="table">
                                                                             <thead>
                                                                             <h5>Elbow</h5>
-                                                                            <tr>
-                                                                                <th scope="col"
-                                                                                    style="font-size:1.5em"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-
-                                                                            </tr>
+                                                                           
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Flexion</th>
                                                                                 <td width="40%"><input type="text"
@@ -2781,17 +2763,8 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                         <table class="table">
                                                                             <thead>
                                                                             <h5>Wrist</h5>
-                                                                            <tr>
-                                                                                <th scope="col"
-                                                                                    style="font-size:1.5em"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-
-                                                                            </tr>
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Flexion</th>
                                                                                 <td width="40%"><input type="text"
@@ -2812,52 +2785,30 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                                        name="extensionright1"></td>
 
                                                                             </tr>
+                                                                            <tr>
+                                                                                    <th scope="row">Hang Grip</th>
+                                                                                    <td width="40%"><input type="text"
+                                                                                                           class="form-control"
+                                                                                                           name="HangGripleft"></td>
+                                                                                    <td width="40%"><input type="text"
+                                                                                                           class="form-control"
+                                                                                                           name="HangGripright"></td>
+    
+                                                                                </tr>
                                                                             </tbody>
                                                                         </table>
 
 
-                                                                        <table class="table">
-                                                                            <thead>
-                                                                            <tr>
-                                                                                <th scope="col"
-                                                                                    style="font-size:1.5em"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-
-                                                                            </tr>
-                                                                            </thead>
-                                                                            <tbody>
-                                                                            <tr>
-                                                                                <th scope="row">Hang Grip</th>
-                                                                                <td width="40%"><input type="text"
-                                                                                                       class="form-control"
-                                                                                                       name="HangGripleft"></td>
-                                                                                <td width="40%"><input type="text"
-                                                                                                       class="form-control"
-                                                                                                       name="HangGripright"></td>
-
-                                                                            </tr>
-                                                                            </tbody>
-                                                                        </table>
-                                                                        <br>
+                                                                        
+                                                                        
 
 
                                                                         <table class="table">
                                                                             <thead>
                                                                             <h5>Lower Limb</h5>
-                                                                            <tr>
-                                                                                <th scope="col"
-                                                                                    style="font-size:1.5em"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-
-                                                                            </tr>
+                                                                            
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Tone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
                                                                                 <td width="40%"><select
@@ -2894,17 +2845,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                         <table class="table">
                                                                             <thead>
                                                                             <h5>Hip</h5>
-                                                                            <tr>
-                                                                                <th scope="col"
-                                                                                    style="font-size:1.5em"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-
-                                                                            </tr>
+                                                                            
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Abduction</th>
                                                                                 <td width="40%"><input type="text"
@@ -2951,17 +2894,9 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                                             <thead>
                                                                             <h5>Knee</h5>
-                                                                            <tr>
-                                                                                <th scope="col"
-                                                                                    style="font-size:1.5em"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-
-                                                                            </tr>
+                                                                            
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Flexion</th>
                                                                                 <td width="40%"><input type="text"
@@ -2989,17 +2924,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                         <table class="table">
                                                                             <thead>
                                                                             <h5>Ankle</h5>
-                                                                            <tr>
-                                                                                <th scope="col"
-                                                                                    style="font-size:1.5em"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-
-                                                                            </tr>
+                                                                            
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Flexion</th>
                                                                                 <td width="40%"><input type="text"
@@ -3117,16 +3044,9 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                 </th>
 
                                                                             </tr>
-                                                                            <tr>
-                                                                                <th scope="col"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-                                                                                <th scope="col"
-                                                                                    class="text-center"></th>
-
-                                                                            </tr>
+                                                                           
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Upper Limb</th>
                                                                                 <td width="40%"><input type="text"
@@ -3174,7 +3094,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                                             </tr>
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Upper Limb</th>
                                                                                 <td width="40%"><input type="text"
@@ -3263,7 +3183,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                                             </tr>
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">VIBRATION</th>
                                                                                 <td width="40%"><input type="text"
@@ -3338,7 +3258,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                                             </tr>
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Biceps</th>
                                                                                 <td width="40%"><input type="text"
@@ -3515,7 +3435,7 @@ License: You must have a valid license purchased only from themeforest(the above
 
                                                                             </tr>
                                                                             </thead>
-                                                                            <tbody>
+                                                                            <tbody style="text-align:center">
                                                                             <tr>
                                                                                 <th scope="row">Rombers</th>
                                                                                 <td width="40%"><input type="text"
@@ -3613,44 +3533,39 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                          style="padding:5%">
 
                                                                         <div class="row">
+                                                                           
                                                                             <div class="col-lg-6">
+                                                                                
                                                                                 <h5>CVS</h5>
-
-                                                                            </div>
-                                                                            <div class="col-lg-6">
-                                                                                <input type="text" name="CVS"
-                                                                                       class="form-control autofill">
+                                                                                <textarea class="form-control m-input" id="exampleTextarea" rows="3" name="CVS"></textarea>
+                                                                                
 
                                                                             </div>
 
                                                                         </div>
+                                                                        <br>
 
                                                                         <div class="row">
+                                                                           
                                                                             <div class="col-lg-6">
-                                                                                <h5>Abdomen</h5>
-
-                                                                            </div>
-                                                                            <div class="col-lg-6">
-                                                                                <input type="text" name="Abdomen"
-                                                                                       class="form-control autofill">
+                                                                                    <h5>Abdomen</h5>
+                                                                                    <textarea class="form-control m-input" id="exampleTextarea" rows="3" name="Abdomen"></textarea>
 
                                                                             </div>
 
                                                                         </div>
-
+                                                                        <br>
                                                                         <div class="row">
+                                                                            
                                                                             <div class="col-lg-6">
-                                                                                <h5>Respiratory System</h5>
-
-                                                                            </div>
-                                                                            <div class="col-lg-6">
-                                                                                <input type="text" name="RespiratorySystem"
-                                                                                       class="form-control autofill">
+                                                                                    <h5>Respiratory System</h5>
+                                                                                    
+                                                                                    <textarea class="form-control m-input" id="exampleTextarea" rows="3" name="RespiratorySystem"></textarea>
 
                                                                             </div>
 
                                                                         </div>
-
+                                                                        <br>
 
                                                                     </div>
                                                                 </div>
@@ -3701,222 +3616,53 @@ License: You must have a valid license purchased only from themeforest(the above
                                             <!--end: Form Wizard Step 3-->
                                             <!--begin: Form Wizard Step 4-->
                                             <div class="m-wizard__form-step" id="m_wizard_form_step_4">
-                                                <div class="row">
-                                                    <div class="col-xl-8 offset-xl-2">
-                                                        <!--begin::Section-->
-                                                        <div class="m-accordion m-accordion--default" id="m_accordion_1"
-                                                             role="tablist">
-                                                            <!--begin::Item-->
-                                                            <div class="m-accordion__item active">
-                                                                <div class="m-accordion__item-head" role="tab"
-                                                                     id="m_accordion_1_item_1_head"
-                                                                     data-toggle="collapse"
-                                                                     href="#m_accordion_1_item_1_body"
-                                                                     aria-expanded="  false">
-                    <span class="m-accordion__item-icon">
-                        <i class="fa flaticon-user-ok"></i>
-                    </span>
-                                                                    <span class="m-accordion__item-title">
-                        1. Client Information
-                    </span>
-                                                                    <span class="m-accordion__item-mode">
-                        <i class="la la-plus"></i>
-                    </span>
-                                                                </div>
-                                                                <div class="m-accordion__item-body collapse show"
-                                                                     id="m_accordion_1_item_1_body" class=" "
-                                                                     role="tabpanel"
-                                                                     aria-labelledby="m_accordion_1_item_1_head"
-                                                                     data-parent="#m_accordion_1">
-                                                                    <!--begin::Content-->
-                                                                    <div class="tab-content  m--padding-30">
-                                                                        <div class="m-form__section m-form__section--first">
-                                                                            <div class="m-form__heading">
-                                                                                <h4 class="m-form__heading-title">
-                                                                                    Account Details
-                                                                                </h4>
-                                                                            </div>
-                                                                            <div class="form-group m-form__group m-form__group--sm row">
-                                                                                <label class="col-xl-4 col-lg-4 col-form-label">
-                                                                                    Alcohol:
-                                                                                </label>
-                                                                                <div class="col-3">
-                                <span class="m-switchs ms-switch--icon">
-                                    <label>
+                                                    <div class="row">
+                                                        <div class="col-xl-8 offset-xl-2">
+                                                            <div class="m-form__section m-form__section--first">
+                                                                   
+                                                           <div class="form-group m-form__group row">
+                                                                <label class="col-form-label col-lg-3 col-sm-12">
+                                                                    Diagnosis
+                                                                </label>
+                                                                
+                                                                <div class="col-sm-12">
+                                                                    <select class="form-control m-select2"
+                                                                            id="m_select2_3" name="Diagnosis"
+                                                                            multiple="multiple" style="width:100%">
+                                                                        <optgroup label="Alaskan/Hawaiian Time Zone">
+                                                                            <option value="AK" selected>
+                                                                                Hypertension
+                                                                            </option>
+                                                                            <option value="HI">
+                                                                                Heart Attack
+                                                                            </option>
+                                                                        </optgroup>
+                                                                       
+                                                                    </select>
 
-<input type="text" id="userLogin" name="Section4Name">
-                                        <span></span>
-                                    </label>
-                                </span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group m-form__group m-form__group--sm row">
-                                                                                <label class="col-xl-4 col-lg-4 col-form-label">
-                                                                                    Smoking
-                                                                                </label>
-                                                                                <div class="col-3">
-                                <span class="m-switch m-switch--icon">
-                                    <label>
-
-                                        <span></span>
-                                    </label>
-                                </span>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group m-form__group m-form__group--sm row">
-                                                                                <label class="col-xl-4 col-lg-4 col-form-label">
-                                                                                    Bowel
-                                                                                </label>
-                                                                                <div class="col-3">
-                                <span class="m-switch m-switch--icon">
-                                    <label>
-
-                                        <span></span>
-                                    </label>
-                                </span>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class="form-group m-form__group m-form__group--sm row">
-                                                                                <label class="col-xl-4 col-lg-4 col-form-label">
-                                                                                    Bladder
-                                                                                </label>
-                                                                                <div class="col-3">
-                                <span class="m-switch m-switch--icon">
-                                    <label>
-
-                                        <span></span>
-                                    </label>
-                                </span>
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class="form-group m-form__group m-form__group--sm row">
-                                                                                <label class="col-xl-4 col-lg-4 col-form-label">
-                                                                                    Sleep
-                                                                                </label>
-                                                                                <div class="col-3">
-                                <span class="m-switch m-switch--icon">
-                                    <label>
-
-                                        <span></span>
-                                    </label>
-                                </span>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="m-form__section">
-                                                                            <div class="m-form__heading">
-                                                                                <h4 class="m-form__heading-title">
-                                                                                    Client Settings
-                                                                                </h4>
-                                                                            </div>
-                                                                            <div class="form-group m-form__group m-form__group--sm row">
-                                                                                <label class=" col-lg-6 col-form-label">
-                                                                                    Summary
-                                                                                </label>
-
-                                                                            </div>
-
-
-                                                                            <div class="form-group m-form__group m-form__group--sm row">
-                                                                                <label class="col-xl-4 col-lg-4 col-form-label">
-                                                                                    Examined By
-                                                                                </label>
-                                                                                <div class="col-xl-8 col-lg-8">
-
-                                                                                    \
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class="form-group m-form__group m-form__group--sm row">
-                                                                                <label class="col-xl-4 col-lg-4 col-form-label">
-                                                                                    Verified By
-                                                                                </label>
-                                                                                <div class="col-xl-8 col-lg-8">
-
-
-                                                                                </div>
-                                                                            </div>
-
-                                                                        </div>
-                                                                    </div>
-                                                                    <!--end::Content-->
                                                                 </div>
                                                             </div>
-                                                            <!--end::Item-->
-                                                            <!--begin::Item-->
+                                                            <div class="form-group m-form__group row">
+                                                                    <label class="col-xl-3 col-lg-3 col-form-label">
+                                                                        ICD 10 codes
+                                                                    </label>
+                                                                    <div class="col-xl-9 col-lg-9">
+                                                                        
+                                                                        <input type="text"
+                                                                               class="form-control m--font-success"
+                                                                               readonly="true" id="myLabel"
+                                                                               style="border:none" name="ICD10">
+    
+                                                                    </div>
+                                                                </div>
 
-                                                            <!--end::Item-->
-                                                            <!--begin::Item-->
-
-                                                            <!--end::Item-->
+                                                              
+                                                            </div>
+                                                           
                                                         </div>
-                                                        <!--end::Section-->
-
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <!--end: Form Wizard Step 4-->
-                                        </div>
-                                        <!--end: Form Body -->
-                                        <!--begin: Form Actions -->
-                                        <div class="m-portlet__foot m-portlet__foot--fit m--margin-top-40">
-                                            <div class="m-form__actions m-form__actions">
-                                                <div class="row">
-                                                    <div class="col-lg-2"></div>
-                                                    <div class="col-lg-4 m--align-left">
-                                                        <a href="#"
-                                                           class="btn btn-secondary m-btn m-btn--custom m-btn--icon"
-                                                           data-wizard-action="prev">
-                    <span>
-                        <i class="la la-arrow-left"></i>
-                        &nbsp;&nbsp;
-                        <span>
-                            Back
-                        </span>
-                    </span>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-lg-4 m--align-right">
-                                                        <button type="submit" onclick="myFunc()"
-                                                                class="btn btn-primary m-btn m-btn--custom m-btn--icon">
-                                                            Save As Draft
-                                                        </button>
-
-
-                                                        <button id="mybtn1" type="submit"
-                                                                class="btn btn-warning m-btn m-btn--custom m-btn--icon"
-                                                                data-wizard-action="next">
-                                                            Next
-                                                        </button>
-
-
-                                                    </div>
-
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--end: Form Actions -->
-                                    </form>
-                                </div>
-                                <!--end: Form Wizard Form-->
-                            </div>
-                            <!--end: Form Wizard-->
-                        </div>
-                        <!--End::Main Portlet-->
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end:: Body -->
-    <!-- begin::Footer -->
-    <!-- end::Footer -->
-</div>
+ 
 <!-- end:: Page -->
 <!-- begin::Quick Sidebar -->
 <div id="m_quick_sidebar" class="m-quick-sidebar m-quick-sidebar--tabbed m-quick-sidebar--skin-light">
