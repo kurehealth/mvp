@@ -92,8 +92,7 @@ class formModel(models.Model):
     sensoryRight12 = models.CharField(max_length=120, null=True)
     motorLeft = models.CharField(max_length=120, null=True)
     motorRight = models.CharField(max_length=120, null=True)
-    jawjerkleft = models.CharField(max_length=120, null=True)
-    jawjerkright = models.CharField(max_length=120, null=True)
+    jawjerk = models.CharField(max_length=120, null=True)
     comealreflexleft = models.CharField(max_length=120, null=True)
     comealreflexright = models.CharField(max_length=120, null=True)
     # models of facial nerve
@@ -112,8 +111,7 @@ class formModel(models.Model):
     rhombusright = models.CharField(max_length=120, null=True)
     rinnesleft = models.CharField(max_length=120, null=True)
     rinnesright = models.CharField(max_length=120, null=True)
-    webbersleft = models.CharField(max_length=120, null=True)
-    webbersright = models.CharField(max_length=120, null=True)
+    webbers= models.CharField(max_length=120, null=True)
     ABCleft = models.CharField(max_length=120, null=True)
     ABCright = models.CharField(max_length=120, null=True)
     # models of Glosopharyngeal and Vagus
@@ -125,8 +123,7 @@ class formModel(models.Model):
     GagRight = models.CharField(max_length=120, null=True)
     palatalleft = models.CharField(max_length=120, null=True)
     palatalright = models.CharField(max_length=120, null=True)
-    uvulaleft = models.CharField(max_length=120, null=True)
-    uvularight = models.CharField(max_length=120, null=True)
+    uvula = models.CharField(max_length=120, null=True)
     # models of Accessory Nerve
     trapeziusleft = models.CharField(max_length=120, null=True)
     trapeziusright = models.CharField(max_length=120, null=True)
@@ -137,8 +134,7 @@ class formModel(models.Model):
     poweroftongueright = models.CharField(max_length=120, null=True)
     wastingleft = models.CharField(max_length=120, null=True)
     wastingright = models.CharField(max_length=120, null=True)
-    protrusionleft = models.CharField(max_length=120, null=True)
-    protrusionright = models.CharField(max_length=120, null=True)
+    protrusion = models.CharField(max_length=120, null=True)
 
     # models of motor system
     # models of upper limb
