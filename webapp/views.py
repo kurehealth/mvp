@@ -9,6 +9,8 @@ from django.views.generic import TemplateView,CreateView,ListView,TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from .forms import myForm
 from django.utils.decorators import method_decorator
+from reportlab.pdfgen import canvas
+import reportlab.rl_config
 import json
 
 
@@ -24,12 +26,21 @@ class empList(APIView):
 	def post(self):
 		pass
 
+class createPDFReport(APIView):
+	def get(self,request):
+		c = canvas.Canvas("hello1.pdf")
+		c.drawString(100, 100, "Hello World")
+		c.showPage()
+		c.save()
+	
 
 class CreatePatientForm(LoginRequiredMixin,CreateView):
 	login_url = '/login/'
 	template_name = 'webapp/createPatient.html'
 	form_class = myForm
 	success_url = 'webapp/stepOneModel_list.html'
+	reportlab.rl_config.warnOnMissingFontGlyphs = 0
+	
 
 class PatientsList(LoginRequiredMixin,ListView):
 	login_url='/login/'
