@@ -162,15 +162,23 @@ License: You must have a valid license purchased only from themeforest(the above
                 </div>
                 <!-- END: Brand -->
                 <div class="m-stack__item m-stack__item--fluid m-header-head" id="m_header_nav">
+                        
                     <!-- BEGIN: Horizontal Menu -->
-                    <button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-dark "
-                            id="m_aside_header_menu_mobile_close_btn">
-                        <i class="la la-close"></i>
-                    </button>
-
+  
                     <!-- END: Horizontal Menu -->
                     <!-- BEGIN: Topbar -->
-
+                    <div id="m_header_topbar" class="m-topbar  m-stack m-stack--ver m-stack--general">
+                            <div class="m-stack__item m-topbar__nav-wrapper">
+                                <ul class="m-topbar__nav m-nav m-nav--inline">
+                                    <li class="m-nav__item">
+                                        <span>
+                                                <a href="{% url 'logout' %}" class="btn m-btn--pill    btn-secondary m-btn m-btn--custom m-btn--label-brand m-btn--bolder">Logout</a>
+                                    </span>
+                                       
+                                    </li>
+                                </ul>
+                                </div>
+                                </div>
                     <!-- END: Topbar -->
                 </div>
             </div>
@@ -208,7 +216,7 @@ License: You must have a valid license purchased only from themeforest(the above
                         </a>
                     </li>
                     <li class="m-menu__item " aria-haspopup="true">
-                        <a href=".{% url 'createpatient' %}" class="m-menu__link ">
+                        <a href="/createpatient" class="m-menu__link ">
                             <i class="m-menu__link-icon flaticon-line-graph"></i>
                             <span class="m-menu__link-title">
                                         <span class="m-menu__link-wrap">
@@ -222,22 +230,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                     </span>
                         </a>
                     </li>
-                    <li class="m-menu__item " aria-haspopup="true">
-                        <a href="../../../index.html" class="m-menu__link ">
-                            <i class="m-menu__link-icon flaticon-line-graph"></i>
-                            <span class="m-menu__link-title">
-                                        <span class="m-menu__link-wrap">
-                                            <span class="m-menu__link-text">
-                                                Search Patient
-                                            </span>
-                                            <span class="m-menu__link-badge">
-
-                                            </span>
-                                        </span>
-                                    </span>
-                        </a>
-                    </li>
-
+                   
 
                     <!-- this is the starting -->
 
@@ -3306,7 +3299,7 @@ License: You must have a valid license purchased only from themeforest(the above
                <div class="row">
                                                                                 <div class="col-lg-6">
                                                                                        <button class="btn btn-primary"
-                                                                                               onclick="autoFillForm('autofilledValue')"
+                                                                                               onclick="motorAutoFillForm()"
                                                                                                style="float:right">Autofill Form
                                                             </button>
                                                                                 </div>
@@ -3741,7 +3734,7 @@ License: You must have a valid license purchased only from themeforest(the above
            <div class="row">
                                                                                 <div class="col-lg-6">
                                                                                        <button class="btn btn-primary"
-                                                                                               onclick="autoFillForm('autofilledValue')"
+                                                                                               onclick="sensoryAutoFillForm()"
                                                                                                style="float:right">Autofill Form
                                                             </button>
                                                                                 </div>
@@ -3792,10 +3785,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                 <th scope="row">Trunk</th>
                                                                                 <td width="40%"><input type="text"
                                                                                                        class="form-control"
-                                                                                                       name="trunkleft"></td>
+                                                                                                       name="trunkright"></td>
                                                                                 <td width="40%"><input type="text"
                                                                                                        class="form-control"
-                                                                                                       name="trunkright"></td>
+                                                                                                       name="trunkleft"></td>
 
                                                                             </tr>
                                                                             <tr>
@@ -3840,10 +3833,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                 <th scope="row">Trunk</th>
                                                                                 <td width="40%"><input type="text"
                                                                                                        class="form-control"
-                                                                                                       name="trunkright"></td>
+                                                                                                       name="trunkright1"></td>
                                                                                 <td width="40%"><input type="text"
                                                                                                        class="form-control"
-                                                                                                       name="trunkleft"></td>
+                                                                                                       name="trunkleft1"></td>
 
                                                                             </tr>
                                                                             <tr>
@@ -3883,7 +3876,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <div class="row">
                                                                                 <div class="col-lg-6">
                                                                                        <button class="btn btn-primary"
-                                                                                               onclick="autoFillForm('autofilledValue')"
+                                                                                               onclick="posteriorAutoFillForm()"
                                                                                                style="float:right">Autofill Form
                                                             </button>
                                                                                 </div>
@@ -3957,7 +3950,7 @@ License: You must have a valid license purchased only from themeforest(the above
                <div class="row">
                                                                                 <div class="col-lg-6">
                                                                                        <button class="btn btn-primary"
-                                                                                               onclick="autoFillForm('autofilledValue')"
+                                                                                               onclick="reflexesAutoFillForm()"
                                                                                                style="float:right">Autofill Form
                                                             </button>
                                                                                 </div>
@@ -4134,7 +4127,7 @@ License: You must have a valid license purchased only from themeforest(the above
              <div class="row">
                                                                                 <div class="col-lg-6">
                                                                                        <button class="btn btn-primary"
-                                                                                               onclick="autoFillForm('autofilledValue')"
+                                                                                               onclick="cerebellarAutoFillForm()"
                                                                                                style="float:right">Autofill Form
                                                             </button>
                                                                                 </div>
@@ -4168,13 +4161,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             </thead>
                                                                             <tbody style="text-align:center">
                                                                             <tr>
-                                                                                <th scope="row">Rombers</th>
+                                                                                <th scope="row">Rombergs</th>
                                                                                 <td width="40%"><input type="text"
                                                                                                        class="form-control"
-                                                                                                       name="rombersRight"></td>
-                                                                                <td width="40%"><input type="text"
-                                                                                                       class="form-control"
-                                                                                                       name="rombersLeft"></td>
+                                                                                                       name="rombers"></td>
+
 
                                                                             </tr>
                                                                             <tr>
@@ -4246,7 +4237,7 @@ License: You must have a valid license purchased only from themeforest(the above
               <div class="row">
                                                                                 <div class="col-lg-6">
                                                                                        <button class="btn btn-primary"
-                                                                                               onclick="autoFillForm('autofilledValue')"
+                                                                                               onclick="otherAutoFillForm()"
                                                                                                style="float:right">Autofill Form
                                                             </button>
                                                                                 </div>
@@ -5345,6 +5336,13 @@ var GeneralExaminationAutoFillValues={GeneralConditions:"poor",
 
 var cranialAutoFillValues={OlfactoryRight:"Normal",OlfactoryLeft:"Normal",VisualAcuityRight:"6/6",VisualAcuityLeft:"6/6",ColorVisionRIght:"Normal",ColorVisionLeft:"Normal",FieldRight:"Normal",FieldLeft:"Normal",FundusRight:"No Papilledema",FundusLeft:"No Papilledema",NystagmusLeft:"Absent",NystagmusRight:"Absent",MovemenstRight:"Full",MovemenstLeft:"Full",PupilRight:"2mm",PupilLeft:"2mm",ConsensualRight:"Normal",ConsensualLeft:"Normal",DirectRight:"Normal",DirectLeft:"Normal",accomodationLeft:"Normal",accomodationLeft:"Normal",accomodationRight:"Normal",sensoryRight:"Normal",sensoryLeft:"Normal",motorRight:"5/5",motorLeft:"5/5",jawjerk:"Absent",comealreflexright:"Normal",comealreflexleft:"Normal",eyeclosesureright:"Good",eyeclosesureleft:"Good",facialexpressionsright:"Normal",facialexpressionsleft:"Normal",tasteright:"Normal",tasterleft:"Normal",SensoryLeft:"Normal",SensoryRight:"Normal",rinnesleft:"AC>BC",rinnesright:"AC>BC",webbers:"Central",sensoryRight1:"Normal",sensoryLeft1:"Normal",motorLeft1:"Normal",motorRight1:"Normal",Gagleft:"Normal",GagRight:"Normal",palatalright:"Normal",palatalleft:"Normal",uvula:"Central",trapeziusleft:"5/5",trapeziusright:"5/5",scmleft:"5/5",scmright:"5/5",poweroftongueright:"Normal",poweroftongueleft:"Normal",wastingleft:"Absent",wastingright:"Absent",protrusion:"Central"};
 
+var motorAutoFillValues={toneright:"Normal",toneleft:"Normal",bulkright:"Normal",bulkleft:"Normal",abductionright:"5/5",abductionleft:"5/5",adductionright:"5/5",adductionleft:"5/5",flexionright:"5/5",flexionleft:"5/5",extensionleft:"5/5",extensionright:"5/5",FlexionRight:"5/5",FlexionLeft:"5/5",ExtensionRight:"5/5",ExtensionLeft:"5/5",flexionleft1:"5/5",flexionright1:"5/5",extensionleft1:"5/5",extensionright1:"5/5",HangGripleft:"100%",HangGripright:"100%",toneleft1:"Normal",toneright1:"Normal",BulkRight:"Normal",BulkLeft:"Normal",abductionright1:"5/5",abductionleft1:"5/5",adductionright1:"5/5",adductionleft1:"5/5",flexionright2:"5/5",flexionleft2:"5/5",extensionright2:"5/5",extensionleft2:"5/5",flexionright3:"5/5",flexionleft3:"5/5",extensionright3:"5/5",extensionleft3:"5/5",flexionright4:"5/5",flexionleft4:"5/5",extensionright4:"5/5",extensionleft4:"5/5",inversionright:"5/5",inversionleft:"5/5",eversionright:"5/5",eversionleft:"5/5",ehlright:"5/5",ehlleft:"5/5",abnormalmovementsright:"NIL",abnormalmovementsleft:"NIL"};
+var sensoryAutoFillValues={upperlimbright:"Normal",upperlimbleft:"Normal",trunkright:"Normal",trunkleft:"Normal",lowerLimbright:"Normal",lowerLimbleft:"Normal",upperlimbright1:"Normal",upperlimbleft1:"Normal",trunkright1:"Normal",trunkleft1:"Normal",lowerLimbright1:"Normal",lowerLimbleft1:"Normal"};
+var posteriorAutoFillValues={vibrationRight:"Normal",vibrationLeft:"Normal",JPSright:"Normal",JPSleft:"Normal"};
+var reflexesAutoFillValues={bicepsright:"2+",bicepsleft:"2+",tricepsright:"2+",tricepsleft:"2+",supinatorright:"2+",supinatorleft:"2+",Kneeright:"2+",Kneeleft:"2+",Ankleright:"2+",Ankleleft:"2+",Abdominalright:"Present",Abdominalleft:"Present",Cremastricright:"Present",Cremastricleft:"Present",BCright:"Present",BCleft:"Present",PlantarRight:"Normal",PlantarLeft:"Normal",HOffmansRight:"Absent",HOffmansLeft:"Absent",Fingerflexionright:"Absent",Fingerflexionleft:"Absent",pectoralRight:"Absent",pectoralLeft:"Absent"};
+var cerebellarAutoFillValues={rombers:"Negative",fingerNoseTextright:"Normal",fingerNoseTextleft:"Normal",pendularKneeJerkright:"Absent",pendularKneeJerkleft:"Absent",kneeHelltestright:"Normal",kneeHelltestleft:"Normal"};
+var otherAutoFillValues={CVS:"S1,S2 Heard, No murmurs",Abdomen:"Soft, Non tender, No organomegaly",RespiratorySystem:"B/L NVBS, No added sounds"};
+
     function generalExaminationAutoFillForm() {
         for(var key in GeneralExaminationAutoFillValues){
             console.log(key);
@@ -5379,6 +5377,108 @@ var cranialAutoFillValues={OlfactoryRight:"Normal",OlfactoryLeft:"Normal",Visual
         
     }
 
+function motorAutoFillForm() {
+        for(var key in motorAutoFillValues){
+            console.log(key);
+            console.log(motorAutoFillValues[key]);
+            if(motorAutoFillValues[key]=="Yes"){
+                document.getElementsByName(key)[0].checked="checked";
+            }
+            else if (motorAutoFillValues[key]=="No"){
+                document.getElementsByName(key)[0].checked="";
+            }
+            else{
+                document.getElementsByName(key)[0].value=motorAutoFillValues[key];
+            }
+        }
+        
+    }
+
+
+function sensoryAutoFillForm() {
+        for(var key in sensoryAutoFillValues){
+            console.log(key);
+            console.log(sensoryAutoFillValues[key]);
+            if(sensoryAutoFillValues[key]=="Yes"){
+                document.getElementsByName(key)[0].checked="checked";
+            }
+            else if (sensoryAutoFillValues[key]=="No"){
+                document.getElementsByName(key)[0].checked="";
+            }
+            else{
+                document.getElementsByName(key)[0].value=sensoryAutoFillValues[key];
+            }
+        }
+        
+    }
+
+function posteriorAutoFillForm() {
+        for(var key in posteriorAutoFillValues){
+            console.log(key);
+            console.log(posteriorAutoFillValues[key]);
+            if(posteriorAutoFillValues[key]=="Yes"){
+                document.getElementsByName(key)[0].checked="checked";
+            }
+            else if (posteriorAutoFillValues[key]=="No"){
+                document.getElementsByName(key)[0].checked="";
+            }
+            else{
+                document.getElementsByName(key)[0].value=posteriorAutoFillValues[key];
+            }
+        }
+        
+    }
+
+function reflexesAutoFillForm() {
+        for(var key in reflexesAutoFillValues){
+            console.log(key);
+            console.log(reflexesAutoFillValues[key]);
+            if(reflexesAutoFillValues[key]=="Yes"){
+                document.getElementsByName(key)[0].checked="checked";
+            }
+            else if (reflexesAutoFillValues[key]=="No"){
+                document.getElementsByName(key)[0].checked="";
+            }
+            else{
+                document.getElementsByName(key)[0].value=reflexesAutoFillValues[key];
+            }
+        }
+        
+    }
+
+function cerebellarAutoFillForm() {
+        for(var key in cerebellarAutoFillValues){
+            console.log(key);
+            console.log(cerebellarAutoFillValues[key]);
+            if(cerebellarAutoFillValues[key]=="Yes"){
+                document.getElementsByName(key)[0].checked="checked";
+            }
+            else if (cerebellarAutoFillValues[key]=="No"){
+                document.getElementsByName(key)[0].checked="";
+            }
+            else{
+                document.getElementsByName(key)[0].value=cerebellarAutoFillValues[key];
+            }
+        }
+        
+    }
+
+function otherAutoFillForm() {
+        for(var key in otherAutoFillValues){
+            console.log(key);
+            console.log(otherAutoFillValues[key]);
+            if(otherAutoFillValues[key]=="Yes"){
+                document.getElementsByName(key)[0].checked="checked";
+            }
+            else if (otherAutoFillValues[key]=="No"){
+                document.getElementsByName(key)[0].checked="";
+            }
+            else{
+                document.getElementsByName(key)[0].value=otherAutoFillValues[key];
+            }
+        }
+        
+    }
 </script>
 
 <script>

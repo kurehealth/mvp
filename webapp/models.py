@@ -207,8 +207,8 @@ class formModel(models.Model):
     # models for temperature
     upperlimbleft1 = models.CharField(max_length=102, null=True)
     upperlimbright1 = models.CharField(max_length=120, null=True)
-    trunkleft = models.CharField(max_length=120, null=True)
-    trunkright = models.CharField(max_length=120, null=True)
+    trunkleft1 = models.CharField(max_length=120, null=True)
+    trunkright1 = models.CharField(max_length=120, null=True)
     lowerLimbleft1 = models.CharField(max_length=120, null=True)
     lowerLimbright1 = models.CharField(max_length=120, null=True)
     # models for posterior column
@@ -242,8 +242,7 @@ class formModel(models.Model):
     pectoralLeft = models.CharField(max_length=120, null=True)
     pectoralRight = models.CharField(max_length=120, null=True)
     # models of cerebellar signs
-    rombersLeft = models.CharField(max_length=120, null=True)
-    rombersRight = models.CharField(max_length=120, null=True)
+    rombers = models.CharField(max_length=120, null=True)
     fingerNoseTextleft = models.CharField(max_length=120, null=True)
     fingerNoseTextright = models.CharField(max_length=120, null=True)
     pendularKneeJerkleft = models.CharField(max_length=120, null=True)
