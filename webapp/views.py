@@ -28,8 +28,10 @@ class empList(APIView):
 
 class createPDFReport(APIView):
 	def get(self,request):
-		c = canvas.Canvas("hello1.pdf")
-		c.drawString(100, 100, "Hello World")
+		parameters = request.query_params
+		kureid=parameters.get('kureid')
+		c = canvas.Canvas("/Users/vyramach/Documents/Kure/MVP/source/mvp/pdfs/hello1.pdf")
+		c.drawString(100, 100,kureid)
 		c.showPage()
 		c.save()
 	
@@ -48,6 +50,7 @@ class PatientsList(LoginRequiredMixin,ListView):
 	paginate_by = 50
 
 	def get_queryset(self):
+		#print(formModel.objects)
 		return formModel.objects.filter(Opno__isnull=False)
 
 
