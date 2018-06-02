@@ -30,10 +30,12 @@ class createPDFReport(APIView):
 	def get(self,request):
 		parameters = request.query_params
 		kureid=parameters.get('kureid')
-		c = canvas.Canvas("/Users/vyramach/Documents/Kure/MVP/source/mvp/pdfs/hello1.pdf")
+		print(kureid)
+		c = canvas.Canvas("/Users/vyramach/Documents/Kure/MVP/source/mvp/pdfs/"+kureid+".pdf")
 		c.drawString(100, 100,kureid)
 		c.showPage()
 		c.save()
+		return Response(kureid)
 	
 
 class CreatePatientForm(LoginRequiredMixin,CreateView):
