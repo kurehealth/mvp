@@ -87,6 +87,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'NAME': 'my-db',
+        'HOST': 'mongo',
+        'port':'27017'
     }
 }
 # Password validation
