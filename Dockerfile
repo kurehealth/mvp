@@ -3,4 +3,4 @@ ENV PYTHONUNBUFFERED 1
 RUN mkdir /webapp
 WORKDIR /webapp
 ADD . /webapp
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
